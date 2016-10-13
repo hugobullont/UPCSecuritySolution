@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPCSecurity", "UPCSecurity\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{CF5B4F97-174E-43A2-BB57-98F7FD4F54AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseScript", "DataBaseScript", "{194DE27E-5815-4672-A80A-22305BB6F0E9}"
+	ProjectSection(SolutionItems) = preProject
+		UPCSecuritySQL.sql = UPCSecuritySQL.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
