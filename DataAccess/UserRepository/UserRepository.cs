@@ -39,15 +39,9 @@ namespace DataAccess.UserRepository
                 var newUser = from c in model.Users
                            where c.Username == userName && c.Password == password
                            select c;
-                if(newUser != null)
-                {
-                    User user = (User)newUser;
-                    return user.UserType;
-                }
-                else
-                {
+                if (newUser.FirstOrDefault() == null)
                     return "null";
-                }
+                return newUser.FirstOrDefault().UserType;
             }
         }
 
