@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerRepository\CustomerRepository.cs" />
+    <Compile Include="CustomerRepository\ICustomerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRepository\IUserRepository.cs" />
     <Compile Include="UserRepository\UserRepository.cs" />
