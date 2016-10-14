@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseScript", "DataBaseS
 		UPCSecuritySQL.sql = UPCSecuritySQL.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B48CEA89-4568-4B8F-A191-0165EA0DB5F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{F93DEDBD-11AB-46A2-B72A-551ED809AD26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{CF5B4F97-174E-43A2-BB57-98F7FD4F54AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF5B4F97-174E-43A2-BB57-98F7FD4F54AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF5B4F97-174E-43A2-BB57-98F7FD4F54AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48CEA89-4568-4B8F-A191-0165EA0DB5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48CEA89-4568-4B8F-A191-0165EA0DB5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48CEA89-4568-4B8F-A191-0165EA0DB5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48CEA89-4568-4B8F-A191-0165EA0DB5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F93DEDBD-11AB-46A2-B72A-551ED809AD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93DEDBD-11AB-46A2-B72A-551ED809AD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93DEDBD-11AB-46A2-B72A-551ED809AD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93DEDBD-11AB-46A2-B72A-551ED809AD26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
