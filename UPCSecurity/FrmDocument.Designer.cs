@@ -30,15 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelId = new System.Windows.Forms.Label();
-            this.labelCode = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelFilePath = new System.Windows.Forms.Label();
-            this.labelDescription = new System.Windows.Forms.Label();
-            this.labelDocType = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.documentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvDocument = new System.Windows.Forms.DataGridView();
             this.idDocumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,20 +39,29 @@
             this.docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idIncidenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incidenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.documentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelId = new System.Windows.Forms.Label();
+            this.labelCode = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelFilePath = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.labelDocType = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.cbDocType = new System.Windows.Forms.ComboBox();
+            this.cbIncidence = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(709, 195);
+            this.btnAdd.Location = new System.Drawing.Point(608, 195);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 0;
@@ -68,13 +69,13 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataGridView1
+            // dgvDocument
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDocument.AllowUserToAddRows = false;
+            this.dgvDocument.AllowUserToDeleteRows = false;
+            this.dgvDocument.AutoGenerateColumns = false;
+            this.dgvDocument.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocument.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDocumentDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
@@ -83,12 +84,72 @@
             this.docTypeDataGridViewTextBoxColumn,
             this.idIncidenceDataGridViewTextBoxColumn,
             this.incidenceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.documentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 286);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(847, 231);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvDocument.DataSource = this.documentBindingSource;
+            this.dgvDocument.Location = new System.Drawing.Point(12, 286);
+            this.dgvDocument.Name = "dgvDocument";
+            this.dgvDocument.ReadOnly = true;
+            this.dgvDocument.Size = new System.Drawing.Size(847, 231);
+            this.dgvDocument.TabIndex = 1;
+            // 
+            // idDocumentDataGridViewTextBoxColumn
+            // 
+            this.idDocumentDataGridViewTextBoxColumn.DataPropertyName = "idDocument";
+            this.idDocumentDataGridViewTextBoxColumn.HeaderText = "idDocument";
+            this.idDocumentDataGridViewTextBoxColumn.Name = "idDocumentDataGridViewTextBoxColumn";
+            this.idDocumentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filePathDataGridViewTextBoxColumn
+            // 
+            this.filePathDataGridViewTextBoxColumn.DataPropertyName = "FilePath";
+            this.filePathDataGridViewTextBoxColumn.HeaderText = "FilePath";
+            this.filePathDataGridViewTextBoxColumn.Name = "filePathDataGridViewTextBoxColumn";
+            this.filePathDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // docTypeDataGridViewTextBoxColumn
+            // 
+            this.docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
+            this.docTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idIncidenceDataGridViewTextBoxColumn
+            // 
+            this.idIncidenceDataGridViewTextBoxColumn.DataPropertyName = "idIncidence";
+            this.idIncidenceDataGridViewTextBoxColumn.HeaderText = "idIncidence";
+            this.idIncidenceDataGridViewTextBoxColumn.Name = "idIncidenceDataGridViewTextBoxColumn";
+            this.idIncidenceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // incidenceDataGridViewTextBoxColumn
+            // 
+            this.incidenceDataGridViewTextBoxColumn.DataPropertyName = "Incidence";
+            this.incidenceDataGridViewTextBoxColumn.HeaderText = "Incidence";
+            this.incidenceDataGridViewTextBoxColumn.Name = "incidenceDataGridViewTextBoxColumn";
+            this.incidenceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // documentBindingSource
+            // 
+            this.documentBindingSource.DataSource = typeof(Entities.Document);
             // 
             // labelId
             // 
@@ -153,132 +214,83 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Incidence";
             // 
-            // documentBindingSource
+            // txtId
             // 
-            this.documentBindingSource.DataSource = typeof(Entities.Document);
+            this.txtId.Location = new System.Drawing.Point(161, 52);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(191, 20);
+            this.txtId.TabIndex = 9;
             // 
-            // idDocumentDataGridViewTextBoxColumn
+            // txtCode
             // 
-            this.idDocumentDataGridViewTextBoxColumn.DataPropertyName = "idDocument";
-            this.idDocumentDataGridViewTextBoxColumn.HeaderText = "idDocument";
-            this.idDocumentDataGridViewTextBoxColumn.Name = "idDocumentDataGridViewTextBoxColumn";
-            this.idDocumentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txtCode.Location = new System.Drawing.Point(161, 81);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(191, 20);
+            this.txtCode.TabIndex = 10;
             // 
-            // codeDataGridViewTextBoxColumn
+            // txtName
             // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txtName.Location = new System.Drawing.Point(161, 117);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(191, 20);
+            this.txtName.TabIndex = 11;
             // 
-            // nameDataGridViewTextBoxColumn
+            // txtFilePath
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txtFilePath.Location = new System.Drawing.Point(161, 152);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Size = new System.Drawing.Size(191, 20);
+            this.txtFilePath.TabIndex = 12;
             // 
-            // filePathDataGridViewTextBoxColumn
+            // txtDescription
             // 
-            this.filePathDataGridViewTextBoxColumn.DataPropertyName = "FilePath";
-            this.filePathDataGridViewTextBoxColumn.HeaderText = "FilePath";
-            this.filePathDataGridViewTextBoxColumn.Name = "filePathDataGridViewTextBoxColumn";
-            this.filePathDataGridViewTextBoxColumn.ReadOnly = true;
+            this.txtDescription.Location = new System.Drawing.Point(161, 192);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(191, 64);
+            this.txtDescription.TabIndex = 13;
             // 
-            // descriptionDataGridViewTextBoxColumn
+            // cbDocType
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cbDocType.FormattingEnabled = true;
+            this.cbDocType.Location = new System.Drawing.Point(608, 52);
+            this.cbDocType.Name = "cbDocType";
+            this.cbDocType.Size = new System.Drawing.Size(121, 21);
+            this.cbDocType.TabIndex = 14;
             // 
-            // docTypeDataGridViewTextBoxColumn
+            // cbIncidence
             // 
-            this.docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
-            this.docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
-            this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
-            this.docTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cbIncidence.DisplayMember = "Code";
+            this.cbIncidence.FormattingEnabled = true;
+            this.cbIncidence.Location = new System.Drawing.Point(608, 84);
+            this.cbIncidence.Name = "cbIncidence";
+            this.cbIncidence.Size = new System.Drawing.Size(121, 21);
+            this.cbIncidence.TabIndex = 15;
+            this.cbIncidence.ValueMember = "Id";
             // 
-            // idIncidenceDataGridViewTextBoxColumn
+            // btnUpdate
             // 
-            this.idIncidenceDataGridViewTextBoxColumn.DataPropertyName = "idIncidence";
-            this.idIncidenceDataGridViewTextBoxColumn.HeaderText = "idIncidence";
-            this.idIncidenceDataGridViewTextBoxColumn.Name = "idIncidenceDataGridViewTextBoxColumn";
-            this.idIncidenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // incidenceDataGridViewTextBoxColumn
-            // 
-            this.incidenceDataGridViewTextBoxColumn.DataPropertyName = "Incidence";
-            this.incidenceDataGridViewTextBoxColumn.HeaderText = "Incidence";
-            this.incidenceDataGridViewTextBoxColumn.Name = "incidenceDataGridViewTextBoxColumn";
-            this.incidenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(161, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(161, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 10;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(161, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 20);
-            this.textBox3.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(161, 152);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 20);
-            this.textBox4.TabIndex = 12;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(161, 192);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(191, 64);
-            this.textBox5.TabIndex = 13;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(608, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DisplayMember = "Code";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(608, 84);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 15;
-            this.comboBox2.ValueMember = "Id";
+            this.btnUpdate.Location = new System.Drawing.Point(709, 195);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 549);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.cbIncidence);
+            this.Controls.Add(this.cbDocType);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtFilePath);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelDocType);
             this.Controls.Add(this.labelDescription);
@@ -286,11 +298,12 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelCode);
             this.Controls.Add(this.labelId);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDocument);
             this.Controls.Add(this.btnAdd);
             this.Name = "FrmDocument";
             this.Text = "FrmDocument";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmDocument_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,7 +313,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDocument;
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.Label labelCode;
         private System.Windows.Forms.Label labelName;
@@ -317,12 +330,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idIncidenceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn incidenceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource documentBindingSource;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtFilePath;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.ComboBox cbDocType;
+        private System.Windows.Forms.ComboBox cbIncidence;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
