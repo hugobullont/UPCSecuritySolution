@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entities;
+using BusinessLogic.UserService;
 using DataAccess.UserRepository;
 
 namespace BusinessLogic.UserService
