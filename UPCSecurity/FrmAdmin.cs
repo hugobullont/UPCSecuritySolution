@@ -31,6 +31,7 @@ namespace UPCSecurity
         private void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmNewUser frmUser = new FrmNewUser();
+            frmUser.MdiParent = this;
             frmUser.Show();
         }
     }
