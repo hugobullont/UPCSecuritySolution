@@ -26,7 +26,7 @@ namespace UPCSecurity
             string userName = this.txtUser.Text;
             string password = this.txtPass.Text;
             string typeUser = UserService.TypeUser(userName, password);
-
+   
             switch (typeUser)
             {
                 case "Admin": FrmAdmin frmAdmin = new FrmAdmin(this); Hide(); frmAdmin.Show();  break;
