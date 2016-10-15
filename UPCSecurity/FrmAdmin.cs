@@ -18,6 +18,8 @@ namespace UPCSecurity
         private FrmCustomer frmCustomer;
         private FrmDocument frmDocument;
         private FrmIncidence frmIncidence;
+        private FrmCustomerIncidence7 frmCI7 = new FrmCustomerIncidence7();
+        private FrmCustomerIncidenceDate frmCID = new FrmCustomerIncidenceDate();
         private User user;
 
         public FrmNewUser FrmNewUser
@@ -103,6 +105,16 @@ namespace UPCSecurity
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLogin.Show();
+        }
+
+        private void incidenceByCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCID.Show();
+        }
+
+        private void cronogramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCI7.Show();
         }
     }
 }

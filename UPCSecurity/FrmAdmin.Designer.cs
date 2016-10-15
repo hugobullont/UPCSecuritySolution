@@ -35,6 +35,9 @@
             this.documentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incidenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incidenceByCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cronogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +45,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
+            this.reportsToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -95,6 +99,29 @@
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incidenceByCustomerToolStripMenuItem,
+            this.cronogramToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // incidenceByCustomerToolStripMenuItem
+            // 
+            this.incidenceByCustomerToolStripMenuItem.Name = "incidenceByCustomerToolStripMenuItem";
+            this.incidenceByCustomerToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.incidenceByCustomerToolStripMenuItem.Text = "Incidence by Customer";
+            this.incidenceByCustomerToolStripMenuItem.Click += new System.EventHandler(this.incidenceByCustomerToolStripMenuItem_Click);
+            // 
+            // cronogramToolStripMenuItem
+            // 
+            this.cronogramToolStripMenuItem.Name = "cronogramToolStripMenuItem";
+            this.cronogramToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.cronogramToolStripMenuItem.Text = "Cronogram";
+            this.cronogramToolStripMenuItem.Click += new System.EventHandler(this.cronogramToolStripMenuItem_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,5 +149,8 @@
         private System.Windows.Forms.ToolStripMenuItem documentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incidenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incidenceByCustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cronogramToolStripMenuItem;
     }
 }
