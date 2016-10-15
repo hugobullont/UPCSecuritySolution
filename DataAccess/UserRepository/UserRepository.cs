@@ -22,6 +22,13 @@ namespace DataAccess.UserRepository
             }
         }
 
+        public List<User> GetAllUsers()
+        {
+            UPCSecurityEntities UPCModel = new UPCSecurityEntities();
+            List<User> users = (from c in UPCModel.Users select c).ToList();
+            return users;
+        }
+
         public void NewUser(User user)
         {
             using (var model = new UPCSecurityEntities())
