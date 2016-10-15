@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace UPCSecurity
         private FrmCustomer frmCustomer;
         private FrmDocument frmDocument;
         private FrmIncidence frmIncidence;
+        private User user;
 
         public FrmNewUser FrmNewUser
         {
@@ -51,19 +53,22 @@ namespace UPCSecurity
             get
             {
                 if (frmIncidence == null || frmIncidence.IsDisposed)
-                    frmIncidence = new FrmIncidence();
+                    frmIncidence = new FrmIncidence(user);
                 return frmIncidence;
             }
         }
+
+        
 
         public FrmAdmin()
         {
             InitializeComponent();
         }
-        public FrmAdmin(FrmLogin value)
+        public FrmAdmin(FrmLogin value, User valueUser)
         {
             InitializeComponent();
             frmLogin = value;
+            user = valueUser;
         }
 
         private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
