@@ -109,11 +109,13 @@ namespace UPCSecurity
 
         private void incidenceByCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCID.MdiParent = this;
             frmCID.Show();
         }
 
         private void cronogramToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCI7.MdiParent = this;
             frmCI7.Show();
         }
     }
