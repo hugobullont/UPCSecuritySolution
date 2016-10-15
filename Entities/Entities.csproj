@@ -60,6 +60,7 @@
     <Compile Include="Incidence.cs">
       <DependentUpon>UPCSecurityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PartialClasses\Incidence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UPCSecurityModel.Context.cs">
       <AutoGen>True</AutoGen>
