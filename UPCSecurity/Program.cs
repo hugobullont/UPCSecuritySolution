@@ -16,7 +16,7 @@ namespace UPCSecurity
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmIncidence());
+            Application.Run(new FrmCustomerIncidenceDate());
         }
     }
 }

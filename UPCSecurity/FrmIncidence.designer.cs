@@ -228,6 +228,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -243,6 +245,7 @@
             this.dataGridView1.DataSource = this.incidenceBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(18, 204);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(946, 357);
             this.dataGridView1.TabIndex = 17;
             // 
@@ -251,54 +254,63 @@
             this.idIncidenceDataGridViewTextBoxColumn.DataPropertyName = "idIncidence";
             this.idIncidenceDataGridViewTextBoxColumn.HeaderText = "idIncidence";
             this.idIncidenceDataGridViewTextBoxColumn.Name = "idIncidenceDataGridViewTextBoxColumn";
+            this.idIncidenceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // codeDataGridViewTextBoxColumn
             // 
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
             this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
             this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stateDataGridViewTextBoxColumn
             // 
             this.stateDataGridViewTextBoxColumn.DataPropertyName = "State";
             this.stateDataGridViewTextBoxColumn.HeaderText = "State";
             this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // environmentDataGridViewTextBoxColumn
             // 
             this.environmentDataGridViewTextBoxColumn.DataPropertyName = "Environment";
             this.environmentDataGridViewTextBoxColumn.HeaderText = "Environment";
             this.environmentDataGridViewTextBoxColumn.Name = "environmentDataGridViewTextBoxColumn";
+            this.environmentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // localDataGridViewTextBoxColumn
             // 
             this.localDataGridViewTextBoxColumn.DataPropertyName = "Local";
             this.localDataGridViewTextBoxColumn.HeaderText = "Local";
             this.localDataGridViewTextBoxColumn.Name = "localDataGridViewTextBoxColumn";
+            this.localDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idUserDataGridViewTextBoxColumn
             // 
             this.idUserDataGridViewTextBoxColumn.DataPropertyName = "idUser";
             this.idUserDataGridViewTextBoxColumn.HeaderText = "idUser";
             this.idUserDataGridViewTextBoxColumn.Name = "idUserDataGridViewTextBoxColumn";
+            this.idUserDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idCustomerDataGridViewTextBoxColumn
             // 
             this.idCustomerDataGridViewTextBoxColumn.DataPropertyName = "idCustomer";
             this.idCustomerDataGridViewTextBoxColumn.HeaderText = "idCustomer";
             this.idCustomerDataGridViewTextBoxColumn.Name = "idCustomerDataGridViewTextBoxColumn";
+            this.idCustomerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // incidenceBindingSource
             // 

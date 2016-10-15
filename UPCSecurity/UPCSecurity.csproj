@@ -64,6 +64,18 @@
     <Compile Include="FrmCustomer.designer.cs">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCustomerIncidence7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomerIncidence7.Designer.cs">
+      <DependentUpon>FrmCustomerIncidence7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerIncidenceDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomerIncidenceDate.Designer.cs">
+      <DependentUpon>FrmCustomerIncidenceDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDocument.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerIncidence7.resx">
+      <DependentUpon>FrmCustomerIncidence7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerIncidenceDate.resx">
+      <DependentUpon>FrmCustomerIncidenceDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDocument.resx">
       <DependentUpon>FrmDocument.cs</DependentUpon>

@@ -25,5 +25,24 @@ namespace DataAccess.IncidenceRepository
                 model.SaveChanges();
             }
         }
+
+        public List<Incidence> GetIncidencesByCustomer(int selectedcustomer)
+        {
+            UPCSecurityEntities UPCModel = new UPCSecurityEntities();
+            List<Incidence> incidences = (from c in UPCModel.Incidences
+                                       where c.idCustomer.Equals(selectedcustomer)
+                                    select c).ToList();
+            return incidences;
+        }
+
+
+        public List<Incidence> GetIncidencesByDates(DateTime date1, DateTime date2, int selectedcustomer)
+        {
+            UPCSecurityEntities UPCModel = new UPCSecurityEntities();
+            List<Incidence> incidences = (from c in UPCModel.Incidences
+                                          where c.Date>=date1 && c.Date<=date2 &&c.idCustomer.Equals(selectedcustomer)
+                                          select c).ToList();
+            return incidences;
+        }
     }
 }
