@@ -58,7 +58,7 @@ namespace UPCSecurity
             }
         }
 
-        bool ValidateFields()
+        private bool ValidateFields()
         {
             bool pass = true;
             string errorMessage = string.Empty;
@@ -87,7 +87,7 @@ namespace UPCSecurity
             return pass;
         }
 
-        bool ValidateId()
+        private bool ValidateId()
         {
             int id;
             if (!int.TryParse(textBox1.Text, out id))

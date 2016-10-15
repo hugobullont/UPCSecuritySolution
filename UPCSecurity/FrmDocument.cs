@@ -20,19 +20,23 @@ namespace UPCSecurity
         }
 
         private readonly IDocumentService service = new DocumentService();
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Document newDocument = new Document()
+            if (ValidateFields())
             {
-                Code = txtCode.Text,
-                Name = txtName.Text,
-                FilePath = txtFilePath.Text,
-                Description = txtDescription.Text,
-                DocType = cbDocType.Text,
-                idIncidence = Convert.ToInt32(cbIncidence.SelectedValue)
-            };
-            service.InsertDocument(newDocument);
-            UpdateDocumentList();
+                Document newDocument = new Document()
+                {
+                    Code = txtCode.Text,
+                    Name = txtName.Text,
+                    FilePath = txtFilePath.Text,
+                    Description = txtDescription.Text,
+                    DocType = cbDocType.Text,
+                    idIncidence = Convert.ToInt32(cbIncidence.SelectedValue)
+                };
+                service.InsertDocument(newDocument);
+                UpdateDocumentList();
+            }
         }
 
         private void FrmDocument_Load(object sender, EventArgs e)
@@ -47,18 +51,21 @@ namespace UPCSecurity
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Document newDocument = new Document()
+            if (ValidateId() && ValidateFields())
             {
-                idDocument = Convert.ToInt32(txtId.Text),
-                Code = txtCode.Text,
-                Name = txtName.Text,
-                FilePath = txtFilePath.Text,
-                Description = txtDescription.Text,
-                DocType = cbDocType.Text,
-                idIncidence = Convert.ToInt32(cbIncidence.SelectedValue)
-            };
-            service.UpdateDocument(newDocument);
-            UpdateDocumentList();
+                Document newDocument = new Document()
+                {
+                    idDocument = Convert.ToInt32(txtId.Text),
+                    Code = txtCode.Text,
+                    Name = txtName.Text,
+                    FilePath = txtFilePath.Text,
+                    Description = txtDescription.Text,
+                    DocType = cbDocType.Text,
+                    idIncidence = Convert.ToInt32(cbIncidence.SelectedValue)
+                };
+                service.UpdateDocument(newDocument);
+                UpdateDocumentList();
+            }
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -70,6 +77,60 @@ namespace UPCSecurity
             {
                 txtFilePath.Text = openFileDialog1.FileName;
             }
+        }
+
+        private bool ValidateFields()
+        {
+            bool pass = true;
+            string errorMessage = string.Empty;
+
+            if (string.IsNullOrEmpty(txtCode.Text))
+            {
+                errorMessage += "Enter a valid code" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(txtName.Text))
+            {
+                errorMessage += "Enter a valid name" + System.Environment.NewLine;
+                pass = false;
+            }
+
+            if (string.IsNullOrEmpty(txtFilePath.Text))
+            {
+                errorMessage += "Enter a valid file path" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(txtDescription.Text))
+            {
+                errorMessage += "Enter a description" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(cbDocType.Text))
+            {
+                errorMessage += "Enter a valid document type" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(cbIncidence.Text))
+            {
+                errorMessage += "Enter a valid incidence id" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                MessageBox.Show(errorMessage, "Error");
+            }
+            return pass;
+        }
+
+        private bool ValidateId()
+        {
+            int id;
+            if (!int.TryParse(txtId.Text, out id))
+            {
+                MessageBox.Show("Enter a valid id", "Error");
+                return false;
+            }
+            return true;
         }
     }
 }
