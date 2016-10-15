@@ -88,7 +88,7 @@ namespace UPCSecurity
             int id;
             if (!int.TryParse(textBox1.Text, out id))
             {
-                MessageBox("Enter a valid id", "Error");
+                MessageBox.Show("Enter a valid id", "Error");
                 return false;
             }
             return true;
