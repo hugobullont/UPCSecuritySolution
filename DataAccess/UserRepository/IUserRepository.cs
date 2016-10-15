@@ -13,5 +13,7 @@ namespace DataAccess.UserRepository
         void UpdateUser(User user);
         void DeleteUser(int userId);
         string TypeUser(string userName, string password);
+        List<User> GetAllUsers();
+        User GetUser(string userName, string password);
     }
 }

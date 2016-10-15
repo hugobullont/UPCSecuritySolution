@@ -17,12 +17,13 @@ namespace UPCSecurity
     public partial class FrmIncidence : Form
     {
 
-
+        private User user;
         private ICustomerService customerService = new CustomerService();
         private IIncidenceService incidenceService = new IncidenceService();
-        public FrmIncidence()
+        public FrmIncidence(User valueUser)
         {
             InitializeComponent();
+            user = valueUser;
         }
 
         private void LoadCustomers()
@@ -66,7 +67,7 @@ namespace UPCSecurity
 
 
             //AQUI VA EL ID DEL USUARIO ACTUALMENTE LOGUEADO
-                objIncidence.idUser = 1;
+                objIncidence.idUser = user.idUser;
 
                 
 

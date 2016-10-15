@@ -28,21 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incidenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.logOutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(867, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incidenceToolStripMenuItem,
+            this.documentToolStripMenuItem});
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.newToolStripMenuItem.Text = "New";
+            // 
+            // incidenceToolStripMenuItem
+            // 
+            this.incidenceToolStripMenuItem.Name = "incidenceToolStripMenuItem";
+            this.incidenceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.incidenceToolStripMenuItem.Text = "Incidence";
+            this.incidenceToolStripMenuItem.Click += new System.EventHandler(this.incidenceToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.logOutToolStripMenuItem.Text = "LogOut";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // documentToolStripMenuItem
+            // 
+            this.documentToolStripMenuItem.Name = "documentToolStripMenuItem";
+            this.documentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.documentToolStripMenuItem.Text = "Document";
+            this.documentToolStripMenuItem.Click += new System.EventHandler(this.documentToolStripMenuItem_Click);
             // 
             // FrmSupervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 481);
+            this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmSupervisor";
             this.Text = "FrmSupervisor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSupervisor_FormClosed);
+            this.Load += new System.EventHandler(this.FrmSupervisor_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incidenceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem documentToolStripMenuItem;
     }
 }

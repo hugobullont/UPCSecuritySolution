@@ -29,8 +29,8 @@ namespace UPCSecurity
    
             switch (typeUser)
             {
-                case "Admin": FrmAdmin frmAdmin = new FrmAdmin(this); Hide(); frmAdmin.Show();  break;
-                case "Sup": FrmSupervisor frmSup = new FrmSupervisor(this); Hide(); frmSup.Show(); break;
+                case "Admin": FrmAdmin frmAdmin = new FrmAdmin(this, UserService.GetUser(userName,password)); Hide(); frmAdmin.Show();  break;
+                case "Sup": FrmSupervisor frmSup = new FrmSupervisor(this, UserService.GetUser(userName, password)); Hide(); frmSup.Show(); break;
                 case "null": MessageBox.Show("Wrong Username/Password!!!", "Try Again", MessageBoxButtons.OK); break;
             }
                 
