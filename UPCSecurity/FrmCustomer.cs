@@ -75,7 +75,11 @@ namespace UPCSecurity
                 errorMessage += "Enter a valid name" + System.Environment.NewLine;
                 pass = false;
             }
-
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
+                errorMessage += "Enter a valid customer type" + System.Environment.NewLine;
+                pass = false;
+            }
             if (!string.IsNullOrEmpty(errorMessage))
             {
                 MessageBox.Show(errorMessage, "Error");
