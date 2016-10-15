@@ -34,7 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 485);
+            this.ClientSize = new System.Drawing.Size(867, 481);
+            this.IsMdiContainer = true;
             this.Name = "FrmSupervisor";
             this.Text = "FrmSupervisor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSupervisor_FormClosed);
