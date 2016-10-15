@@ -38,7 +38,7 @@ namespace UPCSecurity
             {
                 throw ex;
             }
- 
+
         }
 
         private void UpdateIncidenceList()
@@ -46,7 +46,7 @@ namespace UPCSecurity
             List<Incidence> incidenceList = incidenceService.GetAllIncidences();
             this.dataGridView1.DataSource = incidenceList;
         }
-        
+
         private void FrmIncidence_Load(object sender, EventArgs e)
         {
             LoadCustomers();
@@ -55,7 +55,8 @@ namespace UPCSecurity
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            if (ValidateFields())
+            {
                 Incidence objIncidence = new Incidence();
                 objIncidence.Code = this.textBox2.Text;
                 objIncidence.Description = this.textBox3.Text;
@@ -66,7 +67,7 @@ namespace UPCSecurity
                 objIncidence.idCustomer = Convert.ToInt32(this.comboBox4.SelectedValue);
 
 
-            //AQUI VA EL ID DEL USUARIO ACTUALMENTE LOGUEADO
+                //AQUI VA EL ID DEL USUARIO ACTUALMENTE LOGUEADO
                 objIncidence.idUser = user.idUser;
 
                 
@@ -75,8 +76,51 @@ namespace UPCSecurity
                 UpdateIncidenceList();
                 MessageBox.Show("The incidence was inserted!", "Success");
             }
-            
+        }
+        bool ValidateFields()
+        {
+            bool pass = true;
+            string errorMessage = string.Empty;
+
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                errorMessage += "Enter a valid code" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(textBox3.Text))
+            {
+                errorMessage += "Enter a description" + System.Environment.NewLine;
+                pass = false;
+            }
+
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
+                errorMessage += "Enter a valid state" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(comboBox2.Text))
+            {
+                errorMessage += "Enter a valid environment" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(comboBox3.Text))
+            {
+                errorMessage += "Enter a valid local" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (string.IsNullOrEmpty(comboBox4.Text))
+            {
+                errorMessage += "Enter a valid customer" + System.Environment.NewLine;
+                pass = false;
+            }
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                MessageBox.Show(errorMessage, "Error");
+            }
+            return pass;
         }
     }
+
+}
 
 
