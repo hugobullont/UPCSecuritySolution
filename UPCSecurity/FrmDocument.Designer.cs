@@ -55,6 +55,7 @@
             this.cbDocType = new System.Windows.Forms.ComboBox();
             this.cbIncidence = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnBrowse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -278,11 +279,22 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(358, 150);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 17;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
             // FrmDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 549);
+            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.cbIncidence);
             this.Controls.Add(this.cbDocType);
@@ -338,5 +350,6 @@
         private System.Windows.Forms.ComboBox cbDocType;
         private System.Windows.Forms.ComboBox cbIncidence;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnBrowse;
     }
 }

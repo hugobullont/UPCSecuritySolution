@@ -35,7 +35,7 @@ namespace DataAccess.DocumentRepository
         public List<Document> GetAllDocuments()
         {
             return (from d in new UPCSecurityEntities().Documents.Include("Incidences") select d)
-                .ToList();
+            .ToList();
         }
     }
 }
