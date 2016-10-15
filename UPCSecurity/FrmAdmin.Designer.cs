@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(902, 474);
             this.Name = "FrmAdmin";
             this.Text = "FrmAdmin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdmin_FormClosed);
             this.ResumeLayout(false);
 
         }
