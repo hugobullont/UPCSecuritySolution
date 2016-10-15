@@ -31,8 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incidenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +59,16 @@
             // incidenceToolStripMenuItem
             // 
             this.incidenceToolStripMenuItem.Name = "incidenceToolStripMenuItem";
-            this.incidenceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.incidenceToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.incidenceToolStripMenuItem.Text = "Incidence";
             this.incidenceToolStripMenuItem.Click += new System.EventHandler(this.incidenceToolStripMenuItem_Click);
+            // 
+            // documentToolStripMenuItem
+            // 
+            this.documentToolStripMenuItem.Name = "documentToolStripMenuItem";
+            this.documentToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.documentToolStripMenuItem.Text = "Document";
+            this.documentToolStripMenuItem.Click += new System.EventHandler(this.documentToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -69,13 +76,6 @@
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // documentToolStripMenuItem
-            // 
-            this.documentToolStripMenuItem.Name = "documentToolStripMenuItem";
-            this.documentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.documentToolStripMenuItem.Text = "Document";
-            this.documentToolStripMenuItem.Click += new System.EventHandler(this.documentToolStripMenuItem_Click);
             // 
             // FrmSupervisor
             // 
@@ -87,6 +87,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmSupervisor";
             this.Text = "FrmSupervisor";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSupervisor_FormClosed);
             this.Load += new System.EventHandler(this.FrmSupervisor_Load);
             this.menuStrip1.ResumeLayout(false);

@@ -35,5 +35,11 @@ namespace BusinessLogic.IncidenceService
             IIncidenceRepository repository = new IncidenceRepository();
             return repository.GetIncidencesByDates(date1, date2, selectedcustomer);
         }
+
+        public void UpdateIncidence(Incidence objIncidence)
+        {
+            IIncidenceRepository repository = new IncidenceRepository();
+            repository.UpdateIncidence(objIncidence);
+        }
     }
 }

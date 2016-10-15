@@ -120,6 +120,32 @@ namespace UPCSecurity
             }
             return pass;
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (ValidateFields())
+            {
+                Incidence objIncidence = new Incidence();
+                objIncidence.idIncidence = Convert.ToInt32(this.textBox1.Text);
+                objIncidence.Code = this.textBox2.Text;
+                objIncidence.Description = this.textBox3.Text;
+                objIncidence.Date = this.dateTimePicker1.Value.Date;
+                objIncidence.State = this.comboBox1.Text;
+                objIncidence.Environment = this.comboBox2.Text;
+                objIncidence.Local = this.comboBox3.Text;
+                objIncidence.idCustomer = Convert.ToInt32(this.comboBox4.SelectedValue);
+
+
+                //AQUI VA EL ID DEL USUARIO ACTUALMENTE LOGUEADO
+                objIncidence.idUser = user.idUser;
+
+
+
+                this.incidenceService.InsertIncidence(objIncidence);
+                UpdateIncidenceList();
+                MessageBox.Show("The incidence was inserted!", "Success");
+            }
+        }
     }
 
 }

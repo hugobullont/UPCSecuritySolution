@@ -17,5 +17,6 @@ namespace BusinessLogic.IncidenceService
         List<Incidence> GetIncidencesByCustomer(int selectedcustomer);
 
         List<Incidence> GetIncidencesByDates(DateTime date1, DateTime date2, int selectedcustomer);
+        void UpdateIncidence(Incidence objIncidence);
     }
 }

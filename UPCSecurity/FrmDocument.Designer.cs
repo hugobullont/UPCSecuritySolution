@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvDocument = new System.Windows.Forms.DataGridView();
-            this.idDocumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idIncidenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.incidenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelId = new System.Windows.Forms.Label();
             this.labelCode = new System.Windows.Forms.Label();
@@ -56,6 +48,13 @@
             this.cbIncidence = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.idDocumentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idIncidenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -83,70 +82,13 @@
             this.filePathDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.docTypeDataGridViewTextBoxColumn,
-            this.idIncidenceDataGridViewTextBoxColumn,
-            this.incidenceDataGridViewTextBoxColumn});
+            this.idIncidenceDataGridViewTextBoxColumn});
             this.dgvDocument.DataSource = this.documentBindingSource;
             this.dgvDocument.Location = new System.Drawing.Point(12, 286);
             this.dgvDocument.Name = "dgvDocument";
             this.dgvDocument.ReadOnly = true;
-            this.dgvDocument.Size = new System.Drawing.Size(847, 231);
+            this.dgvDocument.Size = new System.Drawing.Size(745, 231);
             this.dgvDocument.TabIndex = 1;
-            // 
-            // idDocumentDataGridViewTextBoxColumn
-            // 
-            this.idDocumentDataGridViewTextBoxColumn.DataPropertyName = "idDocument";
-            this.idDocumentDataGridViewTextBoxColumn.HeaderText = "idDocument";
-            this.idDocumentDataGridViewTextBoxColumn.Name = "idDocumentDataGridViewTextBoxColumn";
-            this.idDocumentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // filePathDataGridViewTextBoxColumn
-            // 
-            this.filePathDataGridViewTextBoxColumn.DataPropertyName = "FilePath";
-            this.filePathDataGridViewTextBoxColumn.HeaderText = "FilePath";
-            this.filePathDataGridViewTextBoxColumn.Name = "filePathDataGridViewTextBoxColumn";
-            this.filePathDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // docTypeDataGridViewTextBoxColumn
-            // 
-            this.docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
-            this.docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
-            this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
-            this.docTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idIncidenceDataGridViewTextBoxColumn
-            // 
-            this.idIncidenceDataGridViewTextBoxColumn.DataPropertyName = "idIncidence";
-            this.idIncidenceDataGridViewTextBoxColumn.HeaderText = "idIncidence";
-            this.idIncidenceDataGridViewTextBoxColumn.Name = "idIncidenceDataGridViewTextBoxColumn";
-            this.idIncidenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // incidenceDataGridViewTextBoxColumn
-            // 
-            this.incidenceDataGridViewTextBoxColumn.DataPropertyName = "Incidence";
-            this.incidenceDataGridViewTextBoxColumn.HeaderText = "Incidence";
-            this.incidenceDataGridViewTextBoxColumn.Name = "incidenceDataGridViewTextBoxColumn";
-            this.incidenceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // documentBindingSource
             // 
@@ -254,6 +196,11 @@
             // cbDocType
             // 
             this.cbDocType.FormattingEnabled = true;
+            this.cbDocType.Items.AddRange(new object[] {
+            "Foto",
+            "Vídeo",
+            "Documento",
+            "Otros"});
             this.cbDocType.Location = new System.Drawing.Point(608, 52);
             this.cbDocType.Name = "cbDocType";
             this.cbDocType.Size = new System.Drawing.Size(121, 21);
@@ -288,6 +235,55 @@
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // idDocumentDataGridViewTextBoxColumn
+            // 
+            this.idDocumentDataGridViewTextBoxColumn.DataPropertyName = "idDocument";
+            this.idDocumentDataGridViewTextBoxColumn.HeaderText = "idDocument";
+            this.idDocumentDataGridViewTextBoxColumn.Name = "idDocumentDataGridViewTextBoxColumn";
+            this.idDocumentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filePathDataGridViewTextBoxColumn
+            // 
+            this.filePathDataGridViewTextBoxColumn.DataPropertyName = "FilePath";
+            this.filePathDataGridViewTextBoxColumn.HeaderText = "FilePath";
+            this.filePathDataGridViewTextBoxColumn.Name = "filePathDataGridViewTextBoxColumn";
+            this.filePathDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // docTypeDataGridViewTextBoxColumn
+            // 
+            this.docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
+            this.docTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idIncidenceDataGridViewTextBoxColumn
+            // 
+            this.idIncidenceDataGridViewTextBoxColumn.DataPropertyName = "idIncidence";
+            this.idIncidenceDataGridViewTextBoxColumn.HeaderText = "idIncidence";
+            this.idIncidenceDataGridViewTextBoxColumn.Name = "idIncidenceDataGridViewTextBoxColumn";
+            this.idIncidenceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmDocument
             // 
@@ -333,14 +329,6 @@
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label labelDocType;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDocumentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn filePathDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idIncidenceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn incidenceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource documentBindingSource;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtCode;
@@ -351,5 +339,12 @@
         private System.Windows.Forms.ComboBox cbIncidence;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDocumentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filePathDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idIncidenceDataGridViewTextBoxColumn;
     }
 }

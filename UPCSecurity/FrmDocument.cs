@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic.DocumentService;
 using Entities;
+using BusinessLogic.IncidenceService;
 
 namespace UPCSecurity
 {
@@ -19,8 +20,8 @@ namespace UPCSecurity
             InitializeComponent();
         }
 
-        private readonly IDocumentService service = new DocumentService();
-
+        private readonly IDocumentService DocumentService = new DocumentService();
+        private readonly IIncidenceService IncidenceService = new IncidenceService();
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (ValidateFields())
@@ -32,9 +33,9 @@ namespace UPCSecurity
                     FilePath = txtFilePath.Text,
                     Description = txtDescription.Text,
                     DocType = cbDocType.Text,
-                    idIncidence = Convert.ToInt32(cbIncidence.SelectedValue)
+                    idIncidence = Convert.ToInt32(cbIncidence.Text)
                 };
-                service.InsertDocument(newDocument);
+                DocumentService.InsertDocument(newDocument);
                 UpdateDocumentList();
             }
         }
@@ -42,11 +43,13 @@ namespace UPCSecurity
         private void FrmDocument_Load(object sender, EventArgs e)
         {
             UpdateDocumentList();
+            
         }
 
         private void UpdateDocumentList()
         {
-            dgvDocument.DataSource = service.GetAllDocuments();
+            cbIncidence.DataSource = IncidenceService.GetAllIncidences();
+            dgvDocument.DataSource = DocumentService.GetAllDocuments();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -63,7 +66,7 @@ namespace UPCSecurity
                     DocType = cbDocType.Text,
                     idIncidence = Convert.ToInt32(cbIncidence.SelectedValue)
                 };
-                service.UpdateDocument(newDocument);
+                DocumentService.UpdateDocument(newDocument);
                 UpdateDocumentList();
             }
         }

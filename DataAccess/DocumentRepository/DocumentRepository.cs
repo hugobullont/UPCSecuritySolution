@@ -33,9 +33,12 @@ namespace DataAccess.DocumentRepository
     }
 
         public List<Document> GetAllDocuments()
-        {
-            return (from d in new UPCSecurityEntities().Documents.Include("Incidences") select d)
-            .ToList();
+        {            
+            using (var model = new UPCSecurityEntities())
+            {
+                var query = from d in model.Documents select d;
+                return query.ToList();
+            }
         }
     }
 }

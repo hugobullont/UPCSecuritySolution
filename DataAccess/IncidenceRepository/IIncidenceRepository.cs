@@ -14,6 +14,7 @@ namespace DataAccess.IncidenceRepository
         List<Incidence> GetIncidencesByCustomer(int selectedcustomer);
 
         void InsertIncidence(Incidence objincidence);
+        void UpdateIncidence(Incidence objIncidence);
 
         List<Incidence> GetIncidencesByDates(DateTime date1, DateTime date2, int selectedcustomer);
 

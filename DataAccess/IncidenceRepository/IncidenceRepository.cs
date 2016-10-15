@@ -44,5 +44,19 @@ namespace DataAccess.IncidenceRepository
                                           select c).ToList();
             return incidences;
         }
+
+        public void UpdateIncidence(Incidence objIncidence)
+        {
+            using (var model = new UPCSecurityEntities())
+            {
+                var original = model.Incidences.Find(objIncidence.idIncidence);
+
+                if (original != null)
+                {
+                    model.Entry(original).CurrentValues.SetValues(objIncidence);
+                    model.SaveChanges();
+                }
+            }
+        }
     }
 }
