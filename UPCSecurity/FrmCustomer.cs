@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using Entities;
 using BusinessLogic.CustomerService;
 
+
 namespace UPCSecurity
 {
     public partial class FrmCustomer : Form
     {
 
         private ICustomerService customerService = new CustomerService();
+
 
         public FrmCustomer()
         {

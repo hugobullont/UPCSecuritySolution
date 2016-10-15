@@ -44,6 +44,8 @@
     <Compile Include="CustomerService\ICustomerService.cs" />
     <Compile Include="DocumentService\DocumentService.cs" />
     <Compile Include="DocumentService\IDocumentService.cs" />
+    <Compile Include="IncidenceService\IIncidenceService.cs" />
+    <Compile Include="IncidenceService\IncidenceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService\IUserService.cs" />
     <Compile Include="UserService\UserService.cs" />

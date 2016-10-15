@@ -50,6 +50,8 @@
     <Compile Include="CustomerRepository\ICustomerRepository.cs" />
     <Compile Include="DocumentRepository\DocumentRepository.cs" />
     <Compile Include="DocumentRepository\IDocumentRepository.cs" />
+    <Compile Include="IncidenceRepository\IIncidenceRepository.cs" />
+    <Compile Include="IncidenceRepository\IncidenceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRepository\IUserRepository.cs" />
     <Compile Include="UserRepository\UserRepository.cs" />

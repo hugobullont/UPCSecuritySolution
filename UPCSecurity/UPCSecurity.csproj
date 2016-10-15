@@ -99,6 +99,9 @@
     <EmbeddedResource Include="FrmDocument.resx">
       <DependentUpon>FrmDocument.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncidence.resx">
+      <DependentUpon>FrmIncidence.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,7 +117,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Entities.Customer.datasource" />
     <None Include="Properties\DataSources\Entities.Document.datasource" />
+    <None Include="Properties\DataSources\Entities.Incidence.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
