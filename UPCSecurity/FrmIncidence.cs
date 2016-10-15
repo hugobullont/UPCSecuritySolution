@@ -77,7 +77,8 @@ namespace UPCSecurity
                 MessageBox.Show("The incidence was inserted!", "Success");
             }
         }
-        bool ValidateFields()
+
+        private bool ValidateFields()
         {
             bool pass = true;
             string errorMessage = string.Empty;
