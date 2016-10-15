@@ -27,5 +27,11 @@ namespace UPCSecurity
         {
             frmLogin.Show();
         }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNewUser frmUser = new FrmNewUser();
+            frmUser.Show();
+        }
     }
 }
