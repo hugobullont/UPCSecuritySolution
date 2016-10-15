@@ -27,5 +27,29 @@ namespace UPCSecurity
         {
             frmLogin.Show();
         }
+
+        private void incidenceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIncidence frmIncidence = new FrmIncidence();
+            frmIncidence.MdiParent = this;
+            frmIncidence.Show();
+        }
+
+        private void documentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDocument frmDocument = new FrmDocument();
+            frmDocument.MdiParent = this;
+            frmDocument.Show();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin.Show();
+        }
+
+        private void FrmSupervisor_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
