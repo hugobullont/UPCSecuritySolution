@@ -23,6 +23,12 @@ namespace BusinessLogic.UserService
             return repository.GetAllUsers();
         }
 
+        public User GetUser(string userName, string password)
+        {
+            IUserRepository repository = new UserRepository();
+            return repository.GetUser(userName, password);
+        }
+
         public void NewUser(User user)
         {
             IUserRepository repository = new UserRepository();

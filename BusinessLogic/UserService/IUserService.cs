@@ -14,5 +14,6 @@ namespace BusinessLogic.UserService
         void DeleteUser(int userId);
         string TypeUser(string userName, string password);
         List<User> GetAllUsers();
+        User GetUser(string userName, string password);
     }
 }
