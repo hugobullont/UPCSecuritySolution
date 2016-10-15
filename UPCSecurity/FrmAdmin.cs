@@ -22,5 +22,10 @@ namespace UPCSecurity
             InitializeComponent();
             frmLogin = value;
         }
+
+        private void FrmAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin.Show();
+        }
     }
 }

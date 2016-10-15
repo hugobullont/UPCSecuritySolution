@@ -12,9 +12,20 @@ namespace UPCSecurity
 {
     public partial class FrmSupervisor : Form
     {
+        private FrmLogin frmLogin;
         public FrmSupervisor()
         {
             InitializeComponent();
+        }
+        public FrmSupervisor(FrmLogin value)
+        {
+            InitializeComponent();
+            frmLogin = value;
+        }
+
+        private void FrmSupervisor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin.Show();
         }
     }
 }

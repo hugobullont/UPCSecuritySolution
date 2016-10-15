@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(867, 481);
             this.Name = "FrmSupervisor";
             this.Text = "FrmSupervisor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSupervisor_FormClosed);
             this.ResumeLayout(false);
 
         }
