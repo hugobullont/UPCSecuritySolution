@@ -70,7 +70,10 @@ namespace UPCSecurity
                 //AQUI VA EL ID DEL USUARIO ACTUALMENTE LOGUEADO
                 objIncidence.idUser = user.idUser;
 
+                
+
                 this.incidenceService.InsertIncidence(objIncidence);
+                UpdateIncidenceList();
                 MessageBox.Show("The incidence was inserted!", "Success");
             }
         }
