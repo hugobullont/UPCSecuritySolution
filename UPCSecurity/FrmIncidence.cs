@@ -141,7 +141,7 @@ namespace UPCSecurity
 
 
 
-                this.incidenceService.InsertIncidence(objIncidence);
+                this.incidenceService.UpdateIncidence(objIncidence);
                 UpdateIncidenceList();
                 MessageBox.Show("The incidence was inserted!", "Success");
             }
